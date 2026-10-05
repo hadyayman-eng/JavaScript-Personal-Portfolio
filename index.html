@@ -2636,23 +2636,30 @@
             >
               <form class="space-y-6" aria-label="نموذج التواصل">
                 <div>
-                  <label for="full-name" class="block text-lg font-medium mb-2"
-                    >الاسم الكامل</label
-                  >
+                  <label for="name" class="block text-lg font-medium mb-2">
+                    الاسم الكامل
+                  </label>
+
                   <input
                     type="text"
-                    id="full-name"
-                    name="full-name"
+                    id="name"
+                    name="name"
                     autocomplete="name"
                     required
                     class="w-full bg-white dark:bg-slate-700/50 border border-slate-300 dark:border-slate-600 rounded-xl px-6 py-4 text-slate-800 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:border-primary transition-colors"
                     placeholder="أدخل اسمك الكامل"
                   />
+
+                  <p class="msgName hidden text-red-500 mt-2">
+                    من فضلك أدخل اسمًا صحيحًا
+                  </p>
                 </div>
+
                 <div>
-                  <label for="email" class="block text-lg font-medium mb-2"
-                    >البريد الإلكتروني</label
-                  >
+                  <label for="email" class="block text-lg font-medium mb-2">
+                    البريد الإلكتروني
+                  </label>
+
                   <input
                     type="email"
                     id="email"
@@ -2662,11 +2669,17 @@
                     class="w-full bg-white dark:bg-slate-700/50 border border-slate-300 dark:border-slate-600 rounded-xl px-6 py-4 text-slate-800 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:border-primary transition-colors"
                     placeholder="example@email.com"
                   />
+
+                  <p class="msgEmail hidden text-red-500 mt-2">
+                    من فضلك أدخل بريدًا إلكترونيًا صحيحًا
+                  </p>
                 </div>
+
                 <div>
-                  <label for="phone" class="block text-lg font-medium mb-2"
-                    >رقم الهاتف</label
-                  >
+                  <label for="phone" class="block text-lg font-medium mb-2">
+                    رقم الهاتف
+                  </label>
+
                   <input
                     type="tel"
                     id="phone"
@@ -2675,16 +2688,23 @@
                     class="w-full bg-white dark:bg-slate-700/50 border border-slate-300 dark:border-slate-600 rounded-xl px-6 py-4 text-slate-800 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:border-primary transition-colors"
                     placeholder="+20 10 XXXX XXXX"
                   />
+
+                  <p class="msgNumber hidden text-red-500 mt-2">
+                    من فضلك أدخل رقم هاتف مصري صحيح
+                  </p>
                 </div>
+
                 <div>
                   <label
                     id="project-type-label"
                     class="block text-lg font-medium mb-2"
-                    >نوع المشروع</label
                   >
+                    نوع المشروع
+                  </label>
+
                   <div class="custom-select-wrapper relative">
                     <div
-                      class="custom-select w-full bg-white dark:bg-slate-700/50 border border-slate-300 dark:border-slate-600 rounded-xl px-6 py-4 text-slate-800 dark:text-white focus:border-primary transition-all cursor-pointer flex justify-between items-center hover:border-primary"
+                      class="custom-select typeProjectInput w-full bg-white dark:bg-slate-700/50 border border-slate-300 dark:border-slate-600 rounded-xl px-6 py-4 text-slate-800 dark:text-white focus:border-primary transition-all cursor-pointer flex justify-between items-center hover:border-primary"
                       data-name="project-type"
                       role="combobox"
                       aria-labelledby="project-type-label"
@@ -2694,15 +2714,18 @@
                     >
                       <span
                         class="selected-text text-slate-500 dark:text-slate-400"
-                        >اختر نوع المشروع</span
                       >
+                        اختر نوع المشروع
+                      </span>
+
                       <i
                         class="fa-solid fa-chevron-down transition-transform duration-300 text-slate-600 dark:text-slate-400"
                         aria-hidden="true"
                       ></i>
                     </div>
+
                     <div
-                      class="custom-options absolute w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-xl mt-2 shadow-2xl z-50 hidden overflow-hidden"
+                      class="custom-options allTypesProjects absolute w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-xl mt-2 shadow-2xl z-50 hidden overflow-hidden"
                       role="listbox"
                       aria-labelledby="project-type-label"
                     >
@@ -2713,6 +2736,7 @@
                       >
                         موقع ويب
                       </div>
+
                       <div
                         class="custom-option px-6 py-3 hover:bg-primary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
                         data-value="تطبيق ويب"
@@ -2720,6 +2744,7 @@
                       >
                         تطبيق ويب
                       </div>
+
                       <div
                         class="custom-option px-6 py-3 hover:bg-primary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
                         data-value="تطبيق جوال"
@@ -2727,6 +2752,7 @@
                       >
                         تطبيق جوال
                       </div>
+
                       <div
                         class="custom-option px-6 py-3 hover:bg-primary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
                         data-value="تصميم UI/UX"
@@ -2734,6 +2760,7 @@
                       >
                         تصميم UI/UX
                       </div>
+
                       <div
                         class="custom-option px-6 py-3 hover:bg-primary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
                         data-value="استشارة تقنية"
@@ -2744,12 +2771,15 @@
                     </div>
                   </div>
                 </div>
+
                 <div>
                   <label
                     id="budget-label"
                     class="block text-lg font-medium mb-2"
-                    >الميزانية المتوقعة</label
                   >
+                    الميزانية المتوقعة
+                  </label>
+
                   <div class="custom-select-wrapper relative">
                     <div
                       class="custom-select w-full bg-white dark:bg-slate-700/50 border border-slate-300 dark:border-slate-600 rounded-xl px-6 py-4 text-slate-800 dark:text-white focus:border-primary transition-all cursor-pointer flex justify-between items-center hover:border-primary"
@@ -2762,13 +2792,16 @@
                     >
                       <span
                         class="selected-text text-slate-500 dark:text-slate-400"
-                        >اختر الميزانية</span
                       >
+                        اختر الميزانية
+                      </span>
+
                       <i
                         class="fa-solid fa-chevron-down transition-transform duration-300 text-slate-600 dark:text-slate-400"
                         aria-hidden="true"
                       ></i>
                     </div>
+
                     <div
                       class="custom-options absolute w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-xl mt-2 shadow-2xl z-50 hidden overflow-hidden"
                       role="listbox"
@@ -2781,6 +2814,7 @@
                       >
                         أقل من 20,000 جنيه
                       </div>
+
                       <div
                         class="custom-option px-6 py-3 hover:bg-secondary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
                         data-value="20,000 - 50,000 جنيه"
@@ -2788,6 +2822,7 @@
                       >
                         20,000 - 50,000 جنيه
                       </div>
+
                       <div
                         class="custom-option px-6 py-3 hover:bg-secondary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
                         data-value="50,000 - 100,000 جنيه"
@@ -2795,6 +2830,7 @@
                       >
                         50,000 - 100,000 جنيه
                       </div>
+
                       <div
                         class="custom-option px-6 py-3 hover:bg-secondary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
                         data-value="أكثر من 100,000 جنيه"
@@ -2805,24 +2841,29 @@
                     </div>
                   </div>
                 </div>
+
                 <div>
-                  <label
-                    for="project-details"
-                    class="block text-lg font-medium mb-2"
-                    >تفاصيل المشروع</label
-                  >
+                  <label for="details" class="block text-lg font-medium mb-2">
+                    تفاصيل المشروع
+                  </label>
+
                   <textarea
-                    id="project-details"
-                    name="project-details"
+                    id="details"
+                    name="details"
                     rows="5"
                     required
                     class="w-full bg-white dark:bg-slate-700/50 border border-slate-300 dark:border-slate-600 rounded-xl px-6 py-4 text-slate-800 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:border-primary transition-colors resize-none"
                     placeholder="احكيلي تفاصيل مشروعك..."
                   ></textarea>
+
+                  <p class="msgDescription hidden text-red-500 mt-2">
+                    من فضلك أدخل تفاصيل المشروع بشكل صحيح
+                  </p>
                 </div>
+
                 <button
                   type="submit"
-                  class="w-full bg-linear-to-r from-primary to-secondary py-4 rounded-xl text-lg font-bold text-white hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105"
+                  class="submitButton w-full bg-linear-to-r from-primary to-secondary py-4 rounded-xl text-lg font-bold text-white hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105"
                 >
                   <i
                     class="fa-solid fa-paper-plane me-2"
@@ -3278,6 +3319,7 @@
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./assets/js/index.js"></script>
   </body>
 </html>
